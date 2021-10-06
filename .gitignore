@@ -1,0 +1,12 @@
+# Maven excludes
+target/
+
+# IntelliJ excludes
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Misc
+pom.xml.releaseBackup
+pom.xml.tag
