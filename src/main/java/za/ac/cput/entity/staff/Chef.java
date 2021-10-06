@@ -1,7 +1,8 @@
 package za.ac.cput.entity.staff;
 
 public class Chef {
-    private int employeeId, yearsOfExperience;
+    private String employeeId;
+    private int yearsOfExperience;
     private double salary;
 
     private Chef(Builder builder){
@@ -10,7 +11,7 @@ public class Chef {
         this.salary = builder.salary;
     }
 
-    public int getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
@@ -23,10 +24,11 @@ public class Chef {
     }
 
     public static class Builder{
-        private int employeeId, yearsOfExperience;
+        private String employeeId;
+        private int yearsOfExperience;
         private double salary;
 
-        public Builder employeeId(int employeeId){
+        public Builder employeeId(String employeeId){
             this.employeeId = employeeId;
             return this;
         }

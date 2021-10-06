@@ -1,14 +1,20 @@
 package za.ac.cput.entity.staff;
 
 public class Waiter {
+    private String employeeId;
     private double hourlyWage;
     private int hours;
     private double tip;
 
     private Waiter(Builder builder){
+        this.employeeId = builder.employeeId;
         this.hourlyWage = builder.hourlyWage;
         this.hours = builder.hours;
         this.tip = builder.tip;
+    }
+
+    public String getEmployeeId() {
+        return employeeId;
     }
 
     public double getHourlyWage() {
@@ -24,9 +30,15 @@ public class Waiter {
     }
 
     public static class Builder{
+        private String employeeId;
         private double hourlyWage;
         private int hours;
         private double tip;
+
+        public Builder employeeId(String employeeId){
+            this.employeeId = employeeId;
+            return this;
+        }
 
         public Builder hourlyWage(double hourlyWage){
             this.hourlyWage = hourlyWage;
@@ -44,6 +56,7 @@ public class Waiter {
         }
 
         public Builder copy(Waiter waiter){
+            this.employeeId = waiter.employeeId;
             this.hourlyWage = waiter.hourlyWage;
             this.hours = waiter.hours;
             this.tip = waiter.tip;
@@ -58,7 +71,8 @@ public class Waiter {
     @Override
     public String toString() {
         return "Waiter{" +
-                "hourlyWage=" + hourlyWage +
+                "employeeId=" + employeeId +
+                ", hourlyWage=" + hourlyWage +
                 ", hours=" + hours +
                 ", tip=" + tip +
                 '}';
