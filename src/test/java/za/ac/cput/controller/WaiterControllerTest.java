@@ -19,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class WaiterControllerTest {
-    private static Waiter waiter = WaiterFactory.buildWaiter(56,4,34);
+    private static Waiter waiter = WaiterFactory.buildWaiter(50,50,50);
     @Autowired
     private TestRestTemplate restTemplate;
     private final String baseUrl = "http://localhost:8080/waiter";
@@ -31,7 +31,7 @@ class WaiterControllerTest {
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
 //        one error
-//        assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
+        assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
         waiter = postResponse.getBody();
         System.out.println("Saved data: " + waiter);
         assertEquals(waiter.getEmployeeId(), postResponse.getBody().getEmployeeId());

@@ -12,7 +12,7 @@ import java.io.Serializable;
  Author: Sindiswa Nomusa Mbhele (219279616)
 */
 @Entity
-@Table(name="table")
+@Table(name="ta_ble")
 public class Ta_ble implements Serializable {
     @Id
     private String tableNumber;
