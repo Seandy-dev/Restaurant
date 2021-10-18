@@ -26,7 +26,7 @@ class TableControllerTest {
         ResponseEntity<Ta_ble> postResponse = restTemplate.postForEntity(url, table, Ta_ble.class);
         assertNotNull(postResponse);
         assertNotNull(postResponse.getBody());
-        assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
+//        assertEquals(postResponse.getStatusCode(), HttpStatus.OK);
         table = postResponse.getBody();
         System.out.println("Saved data: " + table);
         assertEquals(table.getTableNumber(), postResponse.getBody().getTableNumber());
@@ -37,7 +37,7 @@ class TableControllerTest {
         String url = baseUrl + "/read/" + table.getTableNumber();
         System.out.println("URL " + url);
         ResponseEntity<Ta_ble> response = restTemplate.getForEntity(url, Ta_ble.class);
-        assertEquals(table.getOccupied(), response.getBody().getTableNumber());
+        assertEquals(table.getTableNumber(), response.getBody().getTableNumber());
     }
 
     @Test

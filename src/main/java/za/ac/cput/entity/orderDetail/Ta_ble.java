@@ -18,6 +18,8 @@ public class Ta_ble implements Serializable {
     private String tableNumber;
     private boolean occupied;
 
+    private Ta_ble(){};
+
 
     private Ta_ble(Builder builder){
         this.tableNumber = builder.tableNumber;
@@ -58,5 +60,11 @@ public class Ta_ble implements Serializable {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Ta_ble{" +
+                "tableNumber='" + tableNumber + '\'' +
+                ", occupied=" + occupied +
+                '}';
+    }
 }

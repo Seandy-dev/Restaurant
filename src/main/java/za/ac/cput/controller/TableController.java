@@ -7,6 +7,8 @@ import za.ac.cput.entity.orderDetail.Ta_ble;
 import za.ac.cput.factory.orderDetail.TableFactory;
 import za.ac.cput.service.orderDetail.TableService;
 
+@RestController
+@RequestMapping("/table")
 public class TableController {
     @Autowired
     private TableService tableService;

@@ -1,12 +1,14 @@
 package za.ac.cput.service.orderDetail;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import za.ac.cput.entity.orderDetail.Ta_ble;
 import za.ac.cput.repository.orderDetail.TableRepository;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
+@Service
 public class TableService implements ITableRepository{
 
     public static TableService service = null;
