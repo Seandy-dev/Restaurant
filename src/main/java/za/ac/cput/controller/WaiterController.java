@@ -11,6 +11,7 @@ import java.util.Set;
 @RestController
 @RequestMapping("/waiter")
 public class WaiterController {
+
     @Autowired
     private WaiterService waiterService;
 

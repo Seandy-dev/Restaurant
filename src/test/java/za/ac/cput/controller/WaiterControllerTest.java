@@ -20,6 +20,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class WaiterControllerTest {
     private static Waiter waiter = WaiterFactory.buildWaiter(50,50,50);
+    public static String SECURITY_USERNAME = "abc";
+    public static String SECURITY_PASSWORD = "pass";
     @Autowired
     private TestRestTemplate restTemplate;
     private final String baseUrl = "http://localhost:8080/waiter";
@@ -67,7 +69,9 @@ class WaiterControllerTest {
         String url = baseUrl + "/getall";
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity<>(null, headers);
-        ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+        ResponseEntity<String> response = restTemplate
+//                .withBasicAuth(SECURITY_USERNAME, SECURITY_PASSWORD)
+                .exchange(url, HttpMethod.GET, entity, String.class);
         System.out.println("show all");
         System.out.println(response);
         System.out.println(response.getBody());
