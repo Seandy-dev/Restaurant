@@ -23,5 +23,9 @@ public class GenericHelper {
         if (in == null) return true;
         return false;
     }
+    public static boolean isNullorEmpty(Boolean boo) {
+        if (boo == null) return true;
+        return false;
+    }
 
 }

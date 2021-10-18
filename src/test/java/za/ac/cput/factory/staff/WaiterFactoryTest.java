@@ -1,5 +1,8 @@
 package za.ac.cput.factory.staff;
-
+/* WaiterFactoryTest.java
+ Entity for Waiter Factory Test
+ Author: Sindiswa Nomusa Mbhele (219279616)
+*/
 import org.junit.jupiter.api.Test;
 import za.ac.cput.entity.staff.Waiter;
 
