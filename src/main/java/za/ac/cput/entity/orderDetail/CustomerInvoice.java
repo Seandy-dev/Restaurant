@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Table(name="CustomerInvoice")
 public class CustomerInvoice implements Serializable {
     @Id
-    private String invoiceDate;
+    private static String invoiceDate;
     private double orderAmount;
 
 
@@ -22,7 +22,7 @@ public class CustomerInvoice implements Serializable {
 
     }
 
-    public static CustomerInvoice getInvoiceDate() {
+    public static String getInvoiceDate() {
         return invoiceDate;
     }
 
