@@ -22,7 +22,7 @@ public class CustomerInvoice implements Serializable {
 
     }
 
-    public String getInvoiceDate() {
+    public static CustomerInvoice getInvoiceDate() {
         return invoiceDate;
     }
 

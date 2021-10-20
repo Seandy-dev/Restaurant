@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 import za.ac.cput.entity.staff.Chef;
 @Repository
 public interface ChefRepository extends JpaRepository<Chef, String> {
-}
+
+    }
